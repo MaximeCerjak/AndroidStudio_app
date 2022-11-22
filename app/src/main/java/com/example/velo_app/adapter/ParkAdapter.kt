@@ -14,6 +14,7 @@ import com.example.velo_app.R
 import com.example.velo_app.model.Park
 import com.example.velo_app.model.currentLocation
 import com.example.velo_app.model.parkSelected
+import com.example.velo_app.ui.parkDetail.ParkDetailActivity
 import com.example.velo_app.ui.parkDetail.ParkMapActivity
 
 
@@ -26,6 +27,7 @@ class ParkAdapter(private val parks:List<Park>, private val context: Context) :
         val name: TextView = itemView.findViewById(R.id.name)
         val disponibilite: TextView = itemView.findViewById(R.id.disponibilite)
         val distance: TextView = itemView.findViewById(R.id.distance)
+        val dispo: TextView = itemView.findViewById(R.id.distance)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -45,7 +47,7 @@ class ParkAdapter(private val parks:List<Park>, private val context: Context) :
         holder.disponibilite.text = park.grpDisponible.toString()
 
         holder.cardView.setOnClickListener {
-            val intent = Intent(context, ParkMapActivity::class.java)
+            val intent = Intent(context, ParkDetailActivity::class.java)
             parkSelected = park
             context.startActivity(intent)
         }
