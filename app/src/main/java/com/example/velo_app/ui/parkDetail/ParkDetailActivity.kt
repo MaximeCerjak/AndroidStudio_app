@@ -21,6 +21,7 @@ class ParkDetailActivity : AppCompatActivity() {
         val parkDispo = findViewById<TextView>(R.id.dispo)
         val status = findViewById<ImageView>(R.id.status)
         val place = findViewById<TextView>(R.id.places)
+        val goodRoad = findViewById<TextView>(R.id.goodRoad)
 
         parkSelected?.let { park ->
             parkName.text = park.grpNom
@@ -30,6 +31,7 @@ class ParkDetailActivity : AppCompatActivity() {
             {
                 status.setImageResource((R.drawable.ic_baseline_radio_button_nochecked_24))
                 place.text = "Complet"
+                goodRoad.text = "Désolé ce parking est complet"
             }
 
             openParkMapBtn.setOnClickListener {

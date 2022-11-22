@@ -78,7 +78,7 @@
         app:srcCompat="@drawable/ic_baseline_radio_button_checked_24" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/goodRoad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bonne route Souleymane
