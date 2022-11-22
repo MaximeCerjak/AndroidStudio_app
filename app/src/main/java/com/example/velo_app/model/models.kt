@@ -6,6 +6,8 @@ import kotlinx.serialization.*
 var stationSelected:Station? = null
 var allStations:List<Station>? = null
 var currentLocation: Location? = null
+var allParks:List<Park>? = null
+var parkSelected:Park? = null
 
 @Serializable
 data class Station (
